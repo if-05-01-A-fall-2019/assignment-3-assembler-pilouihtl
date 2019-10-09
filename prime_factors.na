@@ -1,0 +1,67 @@
+"Enter a number:!!!!!Error Message!!!!!"
+inc 12
+
+out 3
+lit 0 
+lit 15
+lit 16
+out 2
+la 0 50 #number
+la 0 54
+in 0
+sto
+out 3
+la 0 58 #divider
+lit 2
+sto
+lv 0 50
+lit 1
+rel 0
+fjmp .rightNumber
+
+lit 15
+lit 23
+lit 24
+out 2
+out 3
+jmp .end
+
+.rightNumber
+lv 0 50
+lv 0 58
+mod
+lit 0
+rel 2
+fjmp .higher
+lv 0 58
+lit 1
+out 0 
+out 3
+la 0 50
+lv 0 50
+lv 0 58
+div
+sto
+la 0 58
+lit 2
+sto 
+lv 0 50
+lit 1
+rel 2
+fjmp .rightNumber
+lv 0 50 
+lit 1
+out 0 
+out 3
+jmp .end
+
+.higher
+la 0 58
+lv 0 58
+lit 1
+add
+sto
+jmp .rightNumber
+
+.end
+halt

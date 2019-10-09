@@ -1,0 +1,53 @@
+"Enter max Points:You entered:Enter Points:Per Cent achieved:"
+inc 12
+
+out 3
+lit 0     # address
+lit 17    # string length
+lit 18    # col width
+out 2     # out string
+
+la 0 50   # a
+la 0 54   # addr to store success flag
+in 0   
+sto   
+out 3
+
+lit 17
+lit 12
+lit 13
+out 2
+
+lv 0 50  
+lit 1    
+out 0     # out int
+out 3     # new line
+out 3
+
+lit 29
+lit 13
+lit 14
+out 2
+la 0 58   #b
+la 0 62
+in 0
+sto
+
+la 0 66     #c
+lv 0 58     #b
+lit 100
+mul
+lv 0 50     #a
+div
+sto
+out 3
+
+lit 42
+lit 18
+lit 19
+out 2
+lv 0 66    
+lit 1     
+out 0      
+out 3      
+halt
